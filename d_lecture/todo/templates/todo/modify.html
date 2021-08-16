@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form action="{% url 'todo:modify' item_id %}" method="post">
+    {% csrf_token %}
+    
+
+
+        <h1>{{ item.title}}</h1>
+        <label for="name">New Title Name</label><br>
+        <input type="text" name="name" id="name" value="{{item.title}}"><br>
+        <label for="duetime">New Due Date:</label><br>
+        <input type="datetime-local" id="duetime" name="duetime" value = "{{item.due_date}}" required>
+
+        <input type="submit" value="Update">
+
+
+
+</form>
+</body>
+</html>

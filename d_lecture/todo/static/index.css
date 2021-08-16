@@ -1,0 +1,15 @@
+
+
+h1{
+    color:rgb(87, 126, 233);
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    margin:auto;
+}
+.centr {
+    width:50%;
+    margin:auto;
+}

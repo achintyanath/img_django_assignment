@@ -1,0 +1,16 @@
+
+<form action="{% url 'todo:create' list_id %}" method="post">
+    {% csrf_token %}
+    
+
+        <h1>Add a task:</h1>
+        <label for="name">Task Name:</label><br>
+        <input type="text" name="name" id="name"><br>
+        <label for="duetime">Due Date:</label><br>
+        <input type="datetime-local" id="duetime" name="duetime" required>
+
+        <input type="submit">
+
+
+
+</form>
